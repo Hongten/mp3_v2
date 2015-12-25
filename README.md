@@ -1,6 +1,6 @@
 # mp3_v2
 
-mp3_v2 is a mp3 player, it provides 21 skin for your choice, and it takes up less CPU resources when it running.
+mp3_v2 is a mp3 player, it provides 21 skins for your choice, and it takes up less CPU resources when it running.
 ![Example](https://github.com/Hongten/mp3_v2/blob/master/image/cpu%20usage.png)
 
 
