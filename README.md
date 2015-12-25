@@ -11,6 +11,12 @@ The main panel includes play control buttons(previous, play/pause, next), play m
 ![Example](https://github.com/Hongten/mp3_v2/blob/master/image/main%20panel.png)
 ![Example](https://github.com/Hongten/mp3_v2/blob/master/image/main%20panel_magmaSkin.png)
 
+# Select Directory Panel
+
+'CTRL + N' will open select directory panel to add new song.
+
+![Example](https://github.com/Hongten/mp3_v2/blob/master/image/select%20directory%20panel.png)
+
 # Mini Panel
 
 'CTRL + M' will exchange Mini(hide the play list) or Normal(with the play list) panel.
