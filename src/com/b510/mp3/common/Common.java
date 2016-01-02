@@ -36,6 +36,7 @@ public class Common {
 	public static final String PREVIOUS = "Previous";
 	public static final String ADD = "Add";
 	public static final String MINI = "Mini";
+	public static final String NORMAL = "Normal";
 	public static final String ABOUT = "About " + MP3_PLAYER;
 
 	// Play mode

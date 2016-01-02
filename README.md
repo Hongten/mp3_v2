@@ -27,7 +27,7 @@ The main panel includes play control buttons(previous, play/pause, next), play m
 
 # File Menu Panel
 
-File menu panel includes 'Add', 'Mini', 'Change Skin', Play Mode Exchange, 'About Mp3 Player' and 'Exit' meun.
+File menu panel includes 'Add', 'Mini', 'Change Skin', Play Mode Exchange, 'About Mp3 Player' and 'Exit' menu.
 
 ![Example](https://github.com/Hongten/mp3_v2/blob/master/image/file%20menu%20panel.png)
 

@@ -180,8 +180,12 @@ public class TrayUtil extends JFrame implements ActionListener, MouseListener {
 			mainUI.setVisible(true);
 			if (MainUI.MINI_STATUS) {
 				mainUI.setSize(Common.WINDOW_WIDTH, Common.WINDOW_MINI_HEIGHT);
+				mainUI.setMiniItemText(Common.NORMAL);
+				setMiniItemlabel(Common.NORMAL);
 			} else {
 				mainUI.setSize(Common.WINDOW_WIDTH, Common.WINDOW_HEIGHT);
+				mainUI.setMiniItemText(Common.MINI);
+				setMiniItemlabel(Common.MINI);
 			}
 			MainUI.MINI_STATUS = !MainUI.MINI_STATUS;
 		} else if (e.getSource() == playModeItem) {
@@ -196,6 +200,10 @@ public class TrayUtil extends JFrame implements ActionListener, MouseListener {
 
 	public void setPlayModeItemText(String playModeStr) {
 		playModeItem.setLabel(playModeStr);
+	}
+	
+	public void setMiniItemlabel(String text){
+		miniItem.setLabel(text);
 	}
 
 }

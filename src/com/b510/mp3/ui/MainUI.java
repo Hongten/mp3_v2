@@ -373,8 +373,12 @@ public class MainUI extends Mp3UI {
 			// Ctrl + M can change the mini/normal window.
 			if (MINI_STATUS) {
 				setSize(Common.WINDOW_WIDTH, Common.WINDOW_MINI_HEIGHT);
+				setMiniItemText(Common.NORMAL);
+				tray.setMiniItemlabel(Common.NORMAL);
 			} else {
 				setSize(Common.WINDOW_WIDTH, Common.WINDOW_HEIGHT);
+				setMiniItemText(Common.MINI);
+				tray.setMiniItemlabel(Common.MINI);
 			}
 			MINI_STATUS = !MINI_STATUS;
 		} else if (e.getSource() == exitItem) {
@@ -813,6 +817,10 @@ public class MainUI extends Mp3UI {
 		setMainUIXY();
 		SkinMangerUtil util = new SkinMangerUtil(Common.EMPTY);
 		util.skin(MainUI.this);
+	}
+	
+	public void setMiniItemText(String text){
+		miniItem.setText(text);
 	}
 
 	// exit system
