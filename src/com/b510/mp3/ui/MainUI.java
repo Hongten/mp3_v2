@@ -56,7 +56,7 @@ import com.b510.mp3.vo.PlayListVO;
 public class MainUI extends Mp3UI {
 
 	private static final long serialVersionUID = -2299267016129366047L;
-	
+
 	static Logger logger = Logger.getLogger(MainUI.class);
 
 	// the four buttons for previous, play/pause, next, play mode
@@ -89,10 +89,10 @@ public class MainUI extends Mp3UI {
 	// Default play mode is Shuffle and the value is 0
 	public static int play_mode_value = 0;
 	TimeBarThread timeBarThread;
-	
+
 	// Tray tool
 	private TrayUtil tray;
-	
+
 	public static int pointX = 0;
 	public static int pointY = 0;
 
@@ -168,19 +168,19 @@ public class MainUI extends Mp3UI {
 
 		line = new JSeparator();
 		jMenuFile.add(line);
-		
+
 		changeSkinItem = new JMenuItem(Common.SKIN);
 		changeSkinItem.addActionListener(this);
 		jMenuFile.add(changeSkinItem);
-		
+
 		playModeItem = new JMenuItem(Common.SHUFFLE_MODE);
 		playModeItem.setAccelerator(KeyStroke.getKeyStroke(Common.M, InputEvent.CTRL_MASK + InputEvent.SHIFT_MASK));
 		playModeItem.addActionListener(this);
 		jMenuFile.add(playModeItem);
-		
+
 		line = new JSeparator();
 		jMenuFile.add(line);
-		
+
 		aboutItem = new JMenuItem(Common.ABOUT);
 		aboutItem.setAccelerator(KeyStroke.getKeyStroke(Common.A, InputEvent.CTRL_MASK));
 		aboutItem.addActionListener(this);
@@ -208,7 +208,7 @@ public class MainUI extends Mp3UI {
 		jscrollBarOperation();
 		setSize(Common.WINDOW_WIDTH, Common.WINDOW_HEIGHT);
 		this.setResizable(false);
-		//setting window location
+		// setting window location
 		this.setLocationRelativeTo(null);
 		setMainUIXY();
 		// select one song and double click left button to play.
@@ -223,7 +223,7 @@ public class MainUI extends Mp3UI {
 			public void windowClosing(WindowEvent e) {
 				int option = JOptionPane.showConfirmDialog(MainUI.this, Common.CONFIRM_MINIMIZE, Common.NOTICE, JOptionPane.YES_NO_OPTION);
 				if (option == JOptionPane.YES_OPTION) {
-					//hide the window
+					// hide the window
 					setVisible(false);
 				} else {
 					// exit system
@@ -231,23 +231,23 @@ public class MainUI extends Mp3UI {
 				}
 			}
 		});
-		
+
 		// Loading the tray when the application start.
 		if (null == tray) {
 			tray = new TrayUtil(MainUI.this);
 		} else {
 			tray.initTray();
 		}
-		//main window icon setting
+		// main window icon setting
 		this.setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getClassLoader().getResource(Common.IMAGE_TRAY)));
 		this.setVisible(true);
 	}
-	
+
 	public void setMainUIXY() {
 		pointX = getMainUIX();
 		pointY = getMainUIY();
 	}
-	
+
 	private int getMainUIY() {
 		return (int) getLocation().getY();
 	}
@@ -390,10 +390,10 @@ public class MainUI extends Mp3UI {
 		} else if (e.getSource() == aboutItem) {
 			// show about information
 			JOptionPane.showMessageDialog(this, Common.ABOUT_INFO, Common.ABOUT, JOptionPane.INFORMATION_MESSAGE);
-		} else if(e.getSource() == playModeItem){
+		} else if (e.getSource() == playModeItem) {
 			logger.debug("play mode ....from menu...");
 			playModeOperation();
-		} else if(e.getSource() == changeSkinItem){
+		} else if (e.getSource() == changeSkinItem) {
 			logger.debug("play mode ....from menu...");
 			changeSkin();
 		}
@@ -497,12 +497,7 @@ public class MainUI extends Mp3UI {
 			long ls = m.getDuration();
 			long min = ((ls % (60 * 60 * 1000)) / 60000 * 60);
 			long s = (((ls % (60 * 60 * 1000)) % 60000) / 1000);
-			long ms = (((ls % (60 * 60 * 1000)) % 60000) % 1000);
-			if (ms > 0) {
-				amount = (int) (min + s + 1);
-			} else {
-				amount = (int) (min + s);
-			}
+			amount = (int) (min + s);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -812,14 +807,14 @@ public class MainUI extends Mp3UI {
 			xmlUtil.save(playList);
 		}
 	}
-	
-	public void changeSkin(){
+
+	public void changeSkin() {
 		setMainUIXY();
 		SkinMangerUtil util = new SkinMangerUtil(Common.EMPTY);
 		util.skin(MainUI.this);
 	}
-	
-	public void setMiniItemText(String text){
+
+	public void setMiniItemText(String text) {
 		miniItem.setText(text);
 	}
 

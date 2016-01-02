@@ -49,20 +49,11 @@ public class CommonUtil {
 		try {
 			MultimediaInfo m = encoder.getInfo(source);
 			long ls = m.getDuration();
-			long ms = (((ls % (60 * 60 * 1000)) % 60000) % 1000);
 			long s = (((ls % (60 * 60 * 1000)) % 60000) / 1000);
-			if (ms > 0) {
-				if ((s + 1) <= 9) {
-					temp = Common.COLOR + Common.CHAR_ZERO + (s + 1);
-				} else {
-					temp = Common.COLOR + (s + 1);
-				}
+			if (s <= 9) {
+				temp = Common.COLOR + Common.CHAR_ZERO + s;
 			} else {
-				if ((s + 1) <= 9) {
-					temp = Common.COLOR + Common.CHAR_ZERO + s;
-				} else {
-					temp = Common.COLOR + s;
-				}
+				temp = Common.COLOR + s;
 			}
 			time = (ls % (60 * 60 * 1000)) / 60000 + temp;
 		} catch (Exception e) {
