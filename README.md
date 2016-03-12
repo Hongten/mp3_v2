@@ -52,7 +52,7 @@ Change skin panel includes 21 skins. The player will change skin according to yo
 ![Example](https://github.com/Hongten/mp3_v2/blob/master/image/change%20skin%20panel.png)
 ![Example](https://github.com/Hongten/mp3_v2/blob/master/image/change%20skin%20panel_magmaSkin.png)
 
-# Tray Panel
+# About Panel
 
 About panel includes some information about the player and author.
 
