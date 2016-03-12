@@ -5,7 +5,7 @@ mp3_v2 is a mp3 player, it provides 21 skins for your choice, and it takes up le
 ![Example](https://github.com/Hongten/mp3_v2/blob/master/image/cpu%20usage.png)
 
 mp3_v2 need JDK-1.7 or above.
-You can get the runable jar file [`mp3_v2.jar`](https://github.com/Hongten/mp3_v2/blob/master/jar/mp3_v2.jar?raw=true) (``8.06MB`)to run first.
+You can get the runable jar file [`mp3_v2.jar`](https://github.com/Hongten/mp3_v2/blob/master/jar/mp3_v2.jar?raw=true) (`8.06MB`)to run first.
 
 # Main Panel
 
